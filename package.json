@@ -1,8 +1,8 @@
 {
   "name": "namaste-react",
   "version": "1.0.0",
-  "description": "code along for \"Namaste React v1\" by Akshay Saini",
-  "main": "index.js",
+  "description": "working with react",
+  "main": "app.js",
   "scripts": {
     "test": "jest"
   },
@@ -11,15 +11,13 @@
     "url": "git+ssh://git@github.com/bluebloodedlucifer/namaste-react.git"
   },
   "keywords": [
-    "testing"
+    "react",
+    "namaste-react"
   ],
   "author": "Aryan Panchal",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bluebloodedlucifer/namaste-react/issues"
   },
-  "homepage": "https://github.com/bluebloodedlucifer/namaste-react#readme",
-  "devDependencies": {
-    "parcel": "^2.10.3"
-  }
+  "homepage": "https://github.com/bluebloodedlucifer/namaste-react#readme"
 }
