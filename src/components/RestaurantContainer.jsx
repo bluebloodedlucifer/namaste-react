@@ -1,4 +1,4 @@
-import RestaurantCard, {withOfferLabel} from "./RestaurantCard"
+import RestaurantCard, {withDiscountedLabel} from "./RestaurantCard"
 import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -13,7 +13,7 @@ const RestaurantContainer = () => {
     const [filteredResaurants, setFilteredResaurants] = useState([]);
     // const [listOfRestaurants, setListOfRestaurants] = useState(resList);
 
-    const RestaurantCardWithOffer = withOfferLabel(RestaurantCard);
+    const RestaurantCardWithDiscountedLabel = withDiscountedLabel(RestaurantCard);
 
     const [searchText, setSerachText] = useState("");
 
@@ -66,8 +66,8 @@ const RestaurantContainer = () => {
                 {
                     filteredResaurants.map(restaurant => <Link to={"/restaurants/" + restaurant.info.id} key = {restaurant.info.id}>
                         {restaurant.info?.aggregatedDiscountInfoV3 !== undefined ? (
-                        <RestaurantCardWithOffer resData = {restaurant}/>) : (
-                        <RestaurantCard resData = {restaurant} />)}
+                        <RestaurantCardWithDiscountedLabel resData = {restaurant?.info}/>) : (
+                        <RestaurantCard resData = {restaurant?.info} />)}
                         </Link>)
                 }
             </div>
