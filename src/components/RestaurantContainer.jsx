@@ -44,7 +44,7 @@ const RestaurantContainer = () => {
         <div>
             <div className="flex items-center justify-between">
                 <div className="p-4 m-4 ">
-                    <input type="text" className="border border-solid border-black" value={searchText} onChange={(e) => {
+                    <input type="text" className="border border-solid border-black" data-testid = "searchInput" value={searchText} onChange={(e) => {
                         setSerachText(e.target.value);
                     }}/>
                     <button className = "px-4 py-1 bg-green-100 m-4" onClick={()=>{
