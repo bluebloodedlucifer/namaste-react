@@ -21,7 +21,15 @@
 ### Revison
 01 Episode 1 
 02 Episode 2 - Started on 26 Feb 2024 - 26 Feb
-03 Episode 3 - Started on 26 Feb 2024 - 
+03 Episode 3 - Started on 26 Feb 2024 - 28 Feb
+04 Episode 4 - Started on 28 Feb - 28 Feb
+05 Episode 5 - Started on 28 Feb - 29 Feb
+06 Episode 6 - Started on 29 Feb - 29 Feb
+07 Episode 7 - Started on 29 Feb - 29 Feb
+08 Episode 8 - Started on 29 Feb - 29 Feb
+09 Episode 9 - Started on 1 March - 1 March
+10 Episode 10 - Started on 2 March - 2 March
+11 Episode 11 - Started on 2 March - 2 March --- very important episode -> Lifting the state up, useContext, .Consumer, .Provider
 
 
 
