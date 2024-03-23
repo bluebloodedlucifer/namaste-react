@@ -2,10 +2,13 @@ export const LOGO = "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897
 
 export const USER_AVATAR = "https://wallpapers.com/images/high/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.webp";
 
+export const IMG_CDN = "https://image.tmdb.org/t/p/w500/"
+
 export const API_OPTIONS = {
     method: 'GET',
     headers: {
       accept: 'application/json',
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmZmRiNjQwOWRkZDY0ZmNkNTYyMGJhMjMwYWEzOTQ3MyIsInN1YiI6IjY1ZjdlODk4ZTIxMDIzMDE0YmVkZTBhNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.MxjBjS4ElMg-4kvzaMU6YqiNfQJ9LnmNTDNNxFUhfKo'
     }
-  };
+};
+
