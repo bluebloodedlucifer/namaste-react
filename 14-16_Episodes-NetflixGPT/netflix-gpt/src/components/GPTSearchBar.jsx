@@ -18,10 +18,10 @@ const GPTSearchBar = () => {
       dispatch(addGPTMovies(text.split(",")))
     }
   return (
-    <div className="pt-[10%] flex justify-center">
-        <form className="w-1/2 bg-black grid grid-cols-12" onSubmit={(e) => e.preventDefault()}>
-            <input ref={searchText} type="text" className="p-4 m-4 col-span-9" placeholder={lang[langKey].gptSearchPlaceholder} />
-            <button className="py-2 px-4 m-4 bg-red-700 text-white rounded-lg col-span-3" onClick={handleGPTSearchClick}>{lang[langKey].search}</button>
+    <div className="xl:pt-[10%] md:pt-[30%] pt-[50%] flex justify-center">
+        <form className="md:w-1/2 w-full bg-black grid grid-cols-12 " onSubmit={(e) => e.preventDefault()}>
+            <input ref={searchText} type="text" className="md:p-4 p-2 md:m-4 m-2 col-span-9" placeholder={lang[langKey].gptSearchPlaceholder} />
+            <button className="md:py-2 py-1 md:px-4 px-2  md:m-4 m-2 bg-red-700 text-white rounded-lg col-span-3" onClick={handleGPTSearchClick}>{lang[langKey].search}</button>
         </form>
     </div>
   )

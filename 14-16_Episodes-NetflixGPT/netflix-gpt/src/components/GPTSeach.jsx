@@ -6,7 +6,7 @@ const GPTSeach = () => {
   return (
     <div>
       <div className="fixed -z-10">
-        <img
+        <img className="h-screen object-cover 2xl:h-auto"
           src={BG_IMAGE_URL}
           alt="background"
         />
