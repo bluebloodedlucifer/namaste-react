@@ -17,6 +17,6 @@ export const useMovieTrailer = (movieId) => {
             
         }
         !movieTrailerList.some(e => e.id == movieId) && getMovieVideos();
-    }, [movieId, movieTrailerList])
+    }, [])
 }
 

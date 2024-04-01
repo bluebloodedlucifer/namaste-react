@@ -2,7 +2,7 @@ import { BG_IMAGE_URL } from "../utils/constatants";
 import GPTMovieSuggestions from "./GPTMovieSuggestions";
 import GPTSearchBar from "./GPTSearchBar";
 
-const GPTSeach = () => {
+const GPTSearch = () => {
   return (
     <div>
       <div className="fixed -z-10">
@@ -16,4 +16,4 @@ const GPTSeach = () => {
     </div>
   );
 };
-export default GPTSeach;
+export default GPTSearch;
