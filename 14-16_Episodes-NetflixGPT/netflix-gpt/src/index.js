@@ -8,6 +8,7 @@ import Login from "./components/Login";
 import Browse from "./components/Browse";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
+import MoviePage from "./components/MoviePage";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -31,6 +32,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/browse",
         element: <Browse />,
+      },
+      {
+        path: "/browse/:movieId",
+        element: <MoviePage/>
       },
     ],
   },
