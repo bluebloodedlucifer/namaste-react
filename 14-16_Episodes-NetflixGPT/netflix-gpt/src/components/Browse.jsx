@@ -17,14 +17,10 @@ const Browse = () => {
 
   return (
     <div className="">
-      {gpt ? (
-        <GPTSeach />
-      ) :
-        <>
+      
           <MainContainer />
           <SecondaryContainer />
-        </>
-      }
+        
     </div>
   );
 };

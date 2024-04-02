@@ -4,8 +4,9 @@ import VideoBackground from "./VideoBackground"
 
 const MainContainer = () => {
     const movies = useSelector(store => store.movies?.nowPlayingMovies)
+      // const gpt = useSelector((store) => store.gpt.showGPTSearch);
 
-    if(!movies ) return ; 
+    if(!movies || movies.length === 0) return null; 
 
     const mainMovie = movies[0];
     const {original_title, overview, id} = mainMovie;

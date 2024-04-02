@@ -13,6 +13,12 @@ const gptSilce = createSlice({
         toggleGPTSeachView: (state, action) => {
             state.showGPTSearch = !state.showGPTSearch
         },
+        setTrueGPTSeachView: (state, action) => {
+            state.showGPTSearch = true
+        },
+        setFalseGPTSeachView: (state, action) => {
+            state.showGPTSearch = false
+        },
         addGPTMovies: (state, action) => {
             state.movieNames = action.payload;
         }, 
@@ -22,6 +28,6 @@ const gptSilce = createSlice({
     }
 })
 
-export const {toggleGPTSeachView, addGPTMovies, addTMDBMovies} = gptSilce.actions
+export const {toggleGPTSeachView, addGPTMovies, addTMDBMovies, setTrueGPTSeachView, setFalseGPTSeachView} = gptSilce.actions
 
 export default gptSilce.reducer;

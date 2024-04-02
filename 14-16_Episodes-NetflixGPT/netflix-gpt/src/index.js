@@ -9,6 +9,7 @@ import Browse from "./components/Browse";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import MoviePage from "./components/MoviePage";
+import GPTSearch from "./components/GPTSearch";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -23,7 +24,7 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Login />,
+        element: <Browse/>,
       },
       {
         path: "/login",
@@ -36,6 +37,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/browse/:movieId",
         element: <MoviePage/>
+      },
+      {
+        path: "/gpt",
+        element: <GPTSearch/>
       },
     ],
   },
