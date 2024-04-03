@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <div className="absolute md:px-8 py-2 bg-gradient-to-b from-black z-10 w-screen flex flex-col md:flex-row md:justify-between items-center">
-      <Link to={"/browse"}>
+      <Link to={user? "/browse": "/"}>
       <img className="w-44" src={LOGO} alt="logo" onClick={handleLogoClick} />
       </Link>
       {user && (
