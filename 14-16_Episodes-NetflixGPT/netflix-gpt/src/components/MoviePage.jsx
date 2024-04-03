@@ -24,16 +24,16 @@ const MoviePage = () => {
 
   return (
     <div className="md:pt-0 pt-[35%] bg-black">
-      <VideoTitle title={original_title} overview={overview} />
-      <VideoBackground movieId={movieId} />
+        <VideoTitle title={original_title} overview={overview} />
+        <VideoBackground movieId={movieId} />
 
-      <div className="relative">
+      <div className="relative w-full">
         <img
-          className="h-screen object-cover"
+          className="h-screen object-cover w-screen"
           src={BG_IMAGE_URL}
           alt="background"
         />
-        <div className=" bg-black opacity-90 absolute top-0 w-full">
+        <div className="bg-black opacity-90 absolute top-0 w-full">
           <MovieList title={"Recenty Watched"} movies={movieList} />
         </div>
       </div>
