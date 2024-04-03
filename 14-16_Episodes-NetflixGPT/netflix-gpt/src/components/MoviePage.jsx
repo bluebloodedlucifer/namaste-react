@@ -34,7 +34,7 @@ const MoviePage = () => {
           alt="background"
         />
         <div className="bg-black opacity-90 absolute top-0 w-full">
-          <MovieList title={"Recenty Watched"} movies={movieList} />
+          <MovieList title={"Recently Watched"} movies={movieList} />
         </div>
       </div>
     </div>
