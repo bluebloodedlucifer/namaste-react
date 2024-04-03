@@ -97,7 +97,7 @@ const Login = () => {
       <Header />
       <div className="absolute inset-0">
         <img
-          className="w-full h-full object-cover 2xl:h-auto"
+          className="w-full h-full object-cover"
           src={BG_IMAGE_URL}
           alt="background"
         />
