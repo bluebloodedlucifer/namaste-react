@@ -3,7 +3,8 @@ import useMovieData from "../hooks/useMovieData";
 import { useSelector } from "react-redux";
 import VideoTitle from "./VideoTitle";
 import VideoBackground from "./VideoBackground";
-
+import { BG_IMAGE_URL } from "../utils/constatants";
+import MovieList from "./MovieList";
 
 const MoviePage = () => {
   const movieList = useSelector((store) => store.movies.movieList);
@@ -25,6 +26,17 @@ const MoviePage = () => {
     <div className="md:pt-0 pt-[35%] bg-black">
       <VideoTitle title={original_title} overview={overview} />
       <VideoBackground movieId={movieId} />
+
+        <div className="relative">
+          <img
+            className="h-screen object-cover 2xl:h-auto"
+            src={BG_IMAGE_URL}
+            alt="background"
+          />
+          <div className="md:p-4 md:m-4 bg-black opacity-90 absolute top-0">
+            <MovieList title={"Recenty Watched"} movies={movieList} />
+          </div>
+        </div>
     </div>
   );
 };
