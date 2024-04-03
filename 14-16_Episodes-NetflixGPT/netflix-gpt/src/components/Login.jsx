@@ -2,7 +2,11 @@ import { useRef, useState } from "react";
 import Header from "./Header";
 import { checkValidData } from "../utils/validate";
 
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  updateProfile,
+} from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
@@ -16,7 +20,7 @@ const Login = () => {
   const email = useRef(null);
   const password = useRef(null);
   const firstName = useRef(null);
-  const lastName = useRef(null)
+  const lastName = useRef(null);
 
   const handleButtonclick = () => {
     // validate the form
@@ -36,24 +40,27 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           updateProfile(auth.currentUser, {
-            displayName: firstName.current.value + " "+ lastName.current.value, photoURL: USER_AVATAR
-          }).then(() => {
-            // Profile updated!
-            console.log("Profile Updated")
-            const {uid, email, displayName, photoURL} = auth.currentUser;
-            dispatch(
-              addUser({
-                uid: uid,
-                email: email,
-                displayName: displayName,
-                photoURL: photoURL
-              })
-            )
-            // ...
-          }).catch((error) => {
-            // An error occurred
-            // ...
-          });
+            displayName: firstName.current.value + " " + lastName.current.value,
+            photoURL: USER_AVATAR,
+          })
+            .then(() => {
+              // Profile updated!
+              console.log("Profile Updated");
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(
+                addUser({
+                  uid: uid,
+                  email: email,
+                  displayName: displayName,
+                  photoURL: photoURL,
+                })
+              );
+              // ...
+            })
+            .catch((error) => {
+              // An error occurred
+              // ...
+            });
           // ...
         })
         .catch((error) => {
@@ -64,7 +71,11 @@ const Login = () => {
         });
     } else {
       // Sign in logic
-      signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
@@ -84,12 +95,14 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className="absolute ">
-        <img className="h-screen object-cover 2xl:h-auto"
+      <div className="absolute inset-0">
+        <img
+          className="w-full h-full object-cover 2xl:h-auto"
           src={BG_IMAGE_URL}
           alt="background"
         />
       </div>
+
       <form
         onSubmit={(e) => e.preventDefault()}
         action=""

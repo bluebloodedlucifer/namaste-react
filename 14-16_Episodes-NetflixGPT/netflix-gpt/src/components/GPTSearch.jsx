@@ -5,8 +5,8 @@ import GPTSearchBar from "./GPTSearchBar";
 const GPTSearch = () => {
   return (
     <div>
-      <div className="fixed -z-10">
-        <img className="h-screen object-cover 2xl:h-auto"
+      <div className="fixed -z-10 inset-0">
+        <img className="h-screen w-full object-cover 2xl:h-auto"
           src={BG_IMAGE_URL}
           alt="background"
         />
@@ -17,3 +17,5 @@ const GPTSearch = () => {
   );
 };
 export default GPTSearch;
+
+
